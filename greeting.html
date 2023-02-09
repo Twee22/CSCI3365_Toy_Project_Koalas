@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Good Inc Greeting</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="my_form">
+            <label for="name">What is your name?</label><br>
+            <input type="text" id="name" name="name"><br>
+            <button id="nextStep">Submit</button>
+        </div>
+          
+        <div id="thank_you" style="display: none;">
+            <p>Thank you!</p>
+            <button type="submit">Close</button>
+        </div>
+          
+        <script>
+            var nextStep = document.querySelector('#nextStep');
+          
+            nextStep.addEventListener('click', function (e) {
+                e.preventDefault();
+                // Hide first view
+                document.getElementById('my_form').style.display = 'none';
+            
+                // Show thank you message element
+                document.getElementById('thank_you').innerHTML = 'Hi ' + document.getElementById('name').value;
+                document.getElementById('thank_you').style.display = 'block';
+            });
+          </script>
+          </script>
+    </body>
+</html>
