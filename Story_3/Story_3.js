@@ -1,16 +1,19 @@
-
 const myForm = document.getElementById("myForm");
+const myDialog = document.getElementById("dialog")
 
 myForm.addEventListener("submit", (e) => {
     e.preventDefault();
     var startNumber = document.getElementById("startN").value;
     var endNumber = document.getElementById("endN").value;
     
+    // check for number input
     if (isNaN(startNumber) || isNaN(endNumber) || startNumber == "" || endNumber == "") {
-        alert("Must input only numbers")
+        document.getElementById("dialogP").innerHTML = "Must input only numbers";
+        myDialog.showModal();
         return false;
     
         } else {
+            // call to function sumSequence
             sumSequence(startNumber.trim(), endNumber.trim());
            }
 })
@@ -21,7 +24,9 @@ function sumSequence(startNumber, endNumber) {
     for (i = parseInt(startNumber); i <= parseInt(endNumber); i++ ) {
         sum+= i;
     }
-    alert("The sequential sum of " + startNumber + " and " + endNumber + " is " + sum);
+    // output sum to dialog
+    document.getElementById("dialogP").innerHTML = "The sequential sum of " + startNumber + " and " + endNumber + " is " + sum; 
+        myDialog.showModal();
     return 0;
 }
 

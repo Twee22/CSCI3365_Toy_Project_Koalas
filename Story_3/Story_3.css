@@ -7,7 +7,7 @@
   font-size: 15px;
 }
 
-form {
+.form {
   padding: 10px;
   margin: 10px 10px;
   font-size: larger;
@@ -16,10 +16,10 @@ form {
   transition-duration: .6s;
 }
 
-form:hover {
+.form:hover {
   background-color: white;
   color: black;
-  border: 6px solid #4c9baf;
+  border: 6px solid #000000;
 }
 
 p {

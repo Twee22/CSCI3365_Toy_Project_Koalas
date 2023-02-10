@@ -28,6 +28,14 @@
             <input type="text" id="endN" name="endN"><br><br>
             <input type="submit" value="Submit">
           </form>
+
+          <dialog id= "dialog">
+            <h2>Sequential Sum:  </h2>
+            <p id="dialogP"></p>
+            <form method="dialog">
+              <button>OK</button>
+            </form>
+          </dialog>
  
     </body>
 </html>
