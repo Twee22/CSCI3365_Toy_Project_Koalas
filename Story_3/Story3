@@ -16,12 +16,18 @@
 
     <div class="header">
         <h1>Sum of Sequence Calculator</h1>
-        <p>Click button below to start</p>
+        <p>Fill in forms below and submit</p>
       </div>
 
     <body>
-        
-        <button id="sum" type="submit">Sum of Sequence</button>
+
+        <form id = "myForm" class= "form">
+            <label for="startN">Start number:</label><br>
+            <input type="text" id="startN" name="startN"><br>
+            <label for="endN">End number:</label><br>
+            <input type="text" id="endN" name="endN"><br><br>
+            <input type="submit" value="Submit">
+          </form>
  
     </body>
 </html>

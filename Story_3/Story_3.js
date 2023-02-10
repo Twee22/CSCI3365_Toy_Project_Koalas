@@ -1,28 +1,19 @@
 
-const button = document.getElementById("sum");
-button.addEventListener("click", ()=>{
-   // alert("button is clicked");
+const myForm = document.getElementById("myForm");
 
-   // prompting user
-   let userInput = prompt("Please enter the start number and end numbers separated by a comma")
-
-   // split user input into array
-   var inputArray = userInput.split(',');
-
-   // checking to see if input is not a number
-   if (isNaN(inputArray[0]) || isNaN(inputArray[1]) || inputArray[0] == "" || inputArray[1] == "") {
-    alert("Must input only numbers")
-    return false;
-
-    } else {
-        sumSequence(inputArray[0].trim(), inputArray[1].trim());
-       }
-   
+myForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    var startNumber = document.getElementById("startN").value;
+    var endNumber = document.getElementById("endN").value;
+    
+    if (isNaN(startNumber) || isNaN(endNumber) || startNumber == "" || endNumber == "") {
+        alert("Must input only numbers")
+        return false;
+    
+        } else {
+            sumSequence(startNumber.trim(), endNumber.trim());
+           }
 })
-// add error handling for empty ---- done
-// customize button ---- done
-// add end number ---- done
-// change alert to something else
 
 // function to output sum of numbers between startNumber and endNumber
 function sumSequence(startNumber, endNumber) {
@@ -33,4 +24,5 @@ function sumSequence(startNumber, endNumber) {
     alert("The sequential sum of " + startNumber + " and " + endNumber + " is " + sum);
     return 0;
 }
+
 
