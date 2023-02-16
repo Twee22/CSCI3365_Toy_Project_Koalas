@@ -7,7 +7,8 @@ body{
     background-color: lightgreen;
     background-size: cover;
     height: auto;
-    font-family: fantasy;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    /*Changed font as request of Dr.F */
 }
 
 .container{
@@ -77,3 +78,34 @@ body{
 h2{
     color: darkgreen;
 }
+
+/* css for inventory table */
+table {
+    width: 1000px;
+    height: 500px;
+}
+
+caption {
+    text-align: left;
+    font-size: xx-large;
+}
+
+table, th, td {
+    border: 3px solid #000;
+    border-collapse: collapse;
+    font-size: x-large;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(13, 151, 29, 0.645);
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
